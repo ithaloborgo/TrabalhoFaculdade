@@ -1,0 +1,347 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Chakra Petch", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-size: cover;
+    background-color: #000000;
+    padding: 20px;
+    padding-top: 90px;
+  }
+
+  main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .slide-in {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideIn 0.5s ease forwards;
+  }
+
+  .slide-out {
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideOut 0.4s ease forwards;
+  }
+
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideOut {
+    to {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+  }
+
+  
+  
+  /* navbar */
+  .nav-container {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    background-color: #2e2d2d;
+    padding: 20px 40px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 12px 12px;
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #d4eaff;
+  }
+  
+  /* seções principais */
+  main section {
+    color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .sobre-mim {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .sobre-mim .texto {
+    flex: 1;
+  }
+  
+  .sobre-mim h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #00e1ff;
+    text-align: left;
+  }
+
+  .sobre-mim p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .sobre-mim .foto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sobre-mim .foto img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  .bemvindo {
+    margin-top: 20px;
+    white-space: nowrap;
+  }
+
+  .bemvindo span {
+    border-right: 2px solid #4a90e2;
+    animation: blink-cursor 0.7s steps(1) infinite;
+    font-size: 2rem;
+    font-weight: bold;
+    color: green;
+  }
+
+  @keyframes blink-cursor {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: white; }
+  }
+
+  /* projetos */
+  .projeto {
+    margin-bottom: 20px;
+  }
+  
+  .projeto h3 {
+    margin-bottom: 8px;
+    color: #4a90e2;
+  }
+  
+  .projeto a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .projeto a:hover {
+    text-decoration: underline;
+  }
+  
+  /* formulário de contato */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  form input,
+  form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  form button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #357ab7;
+  }
+  
+  /* rodapé */
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* responsividade */
+  @media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+  
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    main section {
+      padding: 20px;
+    }
+
+    .sobre-mim {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .sobre-mim .texto, .sobre-mim .foto {
+      width: 100%;
+    }
+  
+    .sobre-mim h1 {
+      text-align: center;
+    }
+  
+    .sobre-mim p {
+      text-align: center;
+    }
+  }
+
+  /* ========= RESPONSIVIDADE ========= */
+
+/* Tablets até 1024px */
+@media (max-width: 1024px) {
+  .sobre-mim {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-mim .texto,
+  .sobre-mim .foto {
+    width: 100%;
+  }
+
+  .sobre-mim h1 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+  }
+
+  .bemvindo span {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+  }
+
+  .sobre-mim .foto img {
+    max-width: 250px;
+  }
+}
+
+/* Celulares até 600px */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+  }
+
+  .sobre-mim h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .bemvindo span {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+  }
+
+  .sobre-mim .foto img {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .sobre-mim {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-mim .texto,
+  .sobre-mim .foto {
+    width: 100%;
+  }
+
+  .sobre-mim h1 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+  }
+
+  .bemvindo span {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+  }
+
+  .sobre-mim .foto img {
+    max-width: 250px;
+  }
+}
+
+/* Telas muito grandes (ex: 1440px+) */
+@media (min-width: 1440px) {
+  .sobre-mim h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .bemvindo span {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+  }
+
+  .sobre-mim .foto img {
+    max-width: 350px;
+  }
+}
+
+  
