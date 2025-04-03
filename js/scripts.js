@@ -28,7 +28,7 @@ window.onload = () => {
         main.classList.add('slide-in');
     }
 
-    textoDigitando("mensagem-boas-vindas", "Seja bem-vindo ao meu portfólio!");
+    textoDigitando("mensagem-boas-vindas", "Seja bem-vindo ao meu portifólio!");
 };
 
 
