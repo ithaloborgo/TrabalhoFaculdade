@@ -31,6 +31,30 @@ window.onload = () => {
     textoDigitando("mensagem-boas-vindas", "Seja bem-vindo ao meu portifólio!");
 };
 
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.carousel-control.prev');
+    const nextButton = document.querySelector('.carousel-control.next');
+    let currentIndex = 0;
+  
+    function updateCarousel() {
+      const offset = -currentIndex * 100;
+      carousel.style.transform = 'translateX(' + offset + '%)';
+    }
+  
+    nextButton.addEventListener('click', function() {
+      currentIndex = (currentIndex + 1) % items.length;
+      updateCarousel();
+    });
+  
+    prevButton.addEventListener('click', function() {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      updateCarousel();
+    });
+  });
+  
+
 
 function textoDigitando(elementoId, texto, velocidade = 80, pausa = 1500) {
     const elemento = document.getElementById(elementoId);

@@ -184,10 +184,15 @@
 
   /* projetos */
   /* Container do carousel */
+
+  #projetos h1 {
+    font-size: 2rem;
+  }
+
   .carousel-container {
     position: relative;
     overflow: hidden;
-    margin: 20px 0;
+    margin: 10px 0;
   }
 
   /* Carousel que contém os itens */
@@ -213,7 +218,7 @@
 
   /* Imagem ocupa 40% do card */
   .card-image {
-    width: 40%;
+    width: 60%;
   }
 
   .card-image img {
@@ -223,10 +228,20 @@
   }
 
   /* Descrição ocupa 60% do card */
-  .card-description {
+  .card-descricao {
     width: 60%;
     padding: 20px;
     color: white;
+  }
+
+  .card-descricao h3 {
+    font-size: 1.5rem;
+    color: #00e1ff;
+  }
+
+  .card-descricao a {
+    color: #00e1ff;
+    text-decoration: none;
   }
 
   /* Controles do carousel */
@@ -243,10 +258,24 @@
 
   .carousel-control.prev {
     left: 10px;
+    margin-left: 5px;
+    border-radius: 20px;
+    opacity: 0.5;
   }
 
   .carousel-control.next {
     right: 10px;
+    margin-right: 5px;
+    border-radius: 20px;
+    opacity: 0.5;
+  }
+
+  .carousel-control.next:hover {
+    opacity: 1;
+  }
+
+  .carousel-control.prev:hover {
+    opacity: 1;
   }
 
   
@@ -287,13 +316,13 @@
   }
   
   /* rodapé */
-  footer {
+   footer {
     text-align: center;
     font-size: 0.9rem;
     color: #666;
-    padding-top: 5px;
     position: relative;
   }
+
 
   .skills-titulo {
     font-size: 2rem;
@@ -527,7 +556,11 @@
       cursor: default;
       transition: background-color 0.3s ease;
       position: relative;
-  }
+    }
+
+    .card-image {
+      width: 100%;
+    }
   }
 
   
